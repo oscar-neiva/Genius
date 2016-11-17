@@ -17,11 +17,12 @@ void loop(){
     //valor = analogRead(A0);
     //valor = map(valor,0,1024,0,255);
     //Serial.println(valor);
+    oneByOne();
     for(int i = 0; i < 3; i++) wave();
     allLeds();
     for(int i = 0; i < 3; i++){
-      gausGo();
-      gausBack();
+        gausGo();
+        gausBack();
     }
 }
 
@@ -42,6 +43,41 @@ void wave(){
     delay(50);
     digitalWrite(redLed, LOW);
     delay(50);
+    digitalWrite(redLed, HIGH);
+    delay(50);
+    digitalWrite(redLed, LOW);
+    delay(50);
+    digitalWrite(blueLed, HIGH);
+    delay(50);
+    digitalWrite(blueLed, LOW);
+    delay(50);
+    digitalWrite(greenLed, HIGH);
+    delay(50);
+    digitalWrite(greenLed, LOW);
+    delay(50);
+    digitalWrite(yellowLed, HIGH);
+    delay(50);
+    digitalWrite(yellowLed, LOW);
+    delay(50);
+}
+
+void oneByOne(){
+    digitalWrite(yellowLed, HIGH);
+    delay(500);
+    digitalWrite(yellowLed, LOW);
+    delay(500);
+    digitalWrite(greenLed, HIGH);
+    delay(500);
+    digitalWrite(greenLed, LOW);
+    delay(500);
+    digitalWrite(blueLed, HIGH);
+    delay(500);
+    digitalWrite(blueLed, LOW);
+    delay(500);
+    digitalWrite(redLed, HIGH);
+    delay(500);
+    digitalWrite(redLed, LOW);
+    delay(500);
 }
 
 void allLeds(){
