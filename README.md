@@ -12,7 +12,7 @@ This code is licensed under the MIT, of which a textual copy is available at [LI
 
 Gallery
 -------
-![screenshot 1](https://github.com/oscar-neiva/Genius/blob/master/images/picture.png)
+![screenshot 1](https://github.com/oscar-neiva/Genius/blob/master/images/picture.jpg)
 
 
 Credits
