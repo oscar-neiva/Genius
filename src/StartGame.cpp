@@ -1,32 +1,30 @@
-#include "Arduino.h"
+#include "StartGame.h"
 
-int yellowLed = 8;
-int greenLed = 9;
-int blueLed = 10;
-int redLed = 11;
+StartGame::StartGame(){
+	yellowLed = 8;
+    greenLed = 9;
+    blueLed = 10;
+    redLed = 11;
+}
 
-void setup(){
-    //Serial.begin(9600);//Inicia a comunicaço serial
-    pinMode(yellowLed, OUTPUT);//Porta PWM do led
+void StartGame::InitGame(){
+    pinMode(yellowLed, OUTPUT);
     pinMode(greenLed, OUTPUT);
     pinMode(blueLed, OUTPUT);
     pinMode(redLed, OUTPUT);
 }
 
-void loop(){
-    //valor = analogRead(A0);
-    //valor = map(valor,0,1024,0,255);
-    //Serial.println(valor);
-    oneByOne();
-    for(int i = 0; i < 3; i++) wave();
-    allLeds();
+void StartGame::Start(){
+    OneByOne();
+    for(int i = 0; i < 3; i++) Wave();
+    All();
     for(int i = 0; i < 3; i++){
-        gausGo();
-        gausBack();
+        GausGo();
+        GausBack();
     }
 }
 
-void wave(){
+void StartGame::Wave(){
     digitalWrite(yellowLed, HIGH);
     delay(50);
     digitalWrite(yellowLed, LOW);
@@ -61,7 +59,7 @@ void wave(){
     delay(50);
 }
 
-void oneByOne(){
+void StartGame::OneByOne(){
     digitalWrite(yellowLed, HIGH);
     delay(500);
     digitalWrite(yellowLed, LOW);
@@ -80,19 +78,19 @@ void oneByOne(){
     delay(500);
 }
 
-void allLeds(){
-  digitalWrite(yellowLed, HIGH);
-  digitalWrite(greenLed, HIGH);
-  digitalWrite(blueLed, HIGH);
-  digitalWrite(redLed, HIGH);
-  delay(1000);
-  digitalWrite(yellowLed, LOW);
-  digitalWrite(greenLed, LOW);
-  digitalWrite(blueLed, LOW);
-  digitalWrite(redLed, LOW);
+void StartGame::All(){
+    digitalWrite(yellowLed, HIGH);
+    digitalWrite(greenLed, HIGH);
+    digitalWrite(blueLed, HIGH);
+    digitalWrite(redLed, HIGH);
+    delay(1000);
+    digitalWrite(yellowLed, LOW);
+    digitalWrite(greenLed, LOW);
+    digitalWrite(blueLed, LOW);
+    digitalWrite(redLed, LOW);
 }
 
-void gausGo(){
+void StartGame::GausGo(){
     digitalWrite(blueLed, HIGH);
     digitalWrite(greenLed, HIGH);
     delay(100);
@@ -105,7 +103,7 @@ void gausGo(){
     digitalWrite(redLed, LOW);
 }
 
-void gausBack(){
+void StartGame::GausBack(){
     digitalWrite(yellowLed, HIGH);
     digitalWrite(redLed, HIGH);
     delay(100);

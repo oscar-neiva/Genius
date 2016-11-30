@@ -1,19 +1,14 @@
-Weight-Sensor 
+Genius 
 ==========
-![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
+![License: MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
-A simple embedded software for Arduino platform.
-
-
-Gallery
--------
-![screenshot 1](https://github.com/oscar-neiva/Weight-Sensor/blob/master/images/picture.png)
+A Genius game made using Arduino as a platform.
 
 
 License
 -------
 
-This code is licensed under the GNU GENERAL PUBLIC LICENSE, of which a textual copy is available at [LICENSE.txt](LICENSE.txt).
+This code is licensed under the MIT, of which a textual copy is available at [LICENSE.txt](LICENSE.txt).
 
 
 Credits
