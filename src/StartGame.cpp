@@ -1,20 +1,21 @@
 #include "StartGame.h"
 
 StartGame::StartGame(){
-	yellowLed = 8;
+    /*yellowLed = 8;
     greenLed = 9;
     blueLed = 10;
     redLed = 11;
+
+    ledPins[4] = { yellowLed, greenLed, blueLed, redLed };*/
 }
 
-void StartGame::InitGame(){
-    pinMode(yellowLed, OUTPUT);
-    pinMode(greenLed, OUTPUT);
-    pinMode(blueLed, OUTPUT);
-    pinMode(redLed, OUTPUT);
+void StartGame::InitPins(){
+     for(int i = 0; i <= 3; i++){
+        pinMode(ledPins[i], OUTPUT);
+    }
 }
 
-void StartGame::Start(){
+void StartGame::StartGameLoop(){
     OneByOne();
     for(int i = 0; i < 3; i++) Wave();
     All();

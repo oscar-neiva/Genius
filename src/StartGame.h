@@ -9,12 +9,14 @@ private:
     int greenLed;
     int blueLed;
     int redLed;
+    
+    int ledPins[4] = { 8, 9, 10, 11 };
 
 public:
 	StartGame();
 
-    void InitGame();
-    void Start();
+    void InitPins();
+    void StartGameLoop();
 	void Wave();
     void OneByOne();
     void All();
